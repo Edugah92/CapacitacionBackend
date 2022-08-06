@@ -10,12 +10,8 @@ import com.egarcia.proyectobackend.entity.Producto;
 
 import io.swagger.annotations.ApiOperation;
 
-//@FeignClient("localhost:8080/api/v2")
 @FeignClient(name="ventas", url="localhost:8080/api/v2")
 public interface VentasRepository {
-	
-	/*@RequestMapping(value = "soporte/ventas", method = RequestMethod.GET, params = {"Tipos"})
-		List<Producto> findAllProductos(@RequestParam("clave") String clave, @RequestParam("Tipos") String tipos); */
 	
 	@ApiOperation(value = "Obtener Productos", notes = "Obtener lista de productos disponibles\n"
 			+"No es necesario enviar algun parametro\n"
